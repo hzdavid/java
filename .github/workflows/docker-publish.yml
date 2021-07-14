@@ -57,5 +57,5 @@ jobs:
         with:
           context: java/latest
           push: ${{ github.event_name != 'pull_request' }}
-          tags: ghcr.io/hzdavid/java:latest
-          labels: ${{ steps.meta.outputs.labels }}
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ghcr.io/hzdavid/java:latest
