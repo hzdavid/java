@@ -1,4 +1,4 @@
-FROM registry.cn-hangzhou.aliyuncs.com/shxm/java:aliyun
+FROM registry.cn-hangzhou.aliyuncs.com/shxm/java:latest-aliyun
 
 LABEL buzzxu <downloadxu@163.com>
 
