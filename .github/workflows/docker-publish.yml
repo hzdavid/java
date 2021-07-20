@@ -11,8 +11,6 @@ on:
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository }}
-  DOCKER_USERNAME: shxm
-  DOCKER_TOKEN: c6a68b66-00d8-4df6-a541-cf2e7f39e36e
 
 
 jobs:
@@ -43,8 +41,8 @@ jobs:
       - name: Login to DockerHub
         uses: docker/login-action@v1
         with:
-          username: ${{ env.DOCKER_USERNAME }} #${{ secrets.DOCKER_USERNAME }}
-          password: ${{ env.DOCKER_TOKEN }}    #${{ secrets.DOCKER_TOKEN }}
+          username: ${{ secrets.DOCKER_USERNAME }} 
+          password: ${{ secrets.DOCKER_TOKEN }} 
 
       - name: Build and push DockerHub
         uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
