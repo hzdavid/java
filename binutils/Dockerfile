@@ -1,6 +1,6 @@
 FROM registry.cn-hangzhou.aliyuncs.com/shxm/java:latest-aliyun
 
-LABEL buzzxu <downloadxu@163.com>
+LABEL MAINTAINER buzzxu <downloadxu@163.com>
 
 VOLUME /tmp
 
