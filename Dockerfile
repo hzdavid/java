@@ -20,7 +20,7 @@ RUN set -eux; \
 
 FROM debian:buster-slim
 
-LABEL MAINTAINER=buzzxu<downloadxu@163.com>
+LABEL org.opencontainers.image.authors="buzzxu<downloadxu@163.com>"
 
 ADD sources.list /etc/apt/
 
