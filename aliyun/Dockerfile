@@ -19,4 +19,6 @@ apt-get clean && \
     rm -rf /var/lib/apt/lists/* && \
     rm -rf /tmp/*
 
+ENV JAVA_OPTS ${JAVA_OPTS} '-javaagent:/root/ArmsAgent/arms-bootstrap-1.7.0-SNAPSHOT.jar -Darms.licenseKey='${arms_licenseKey}' -Darms.appName='${arms_appName}
+
 ENTRYPOINT ["java","-version"]
