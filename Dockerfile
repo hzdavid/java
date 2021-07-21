@@ -7,7 +7,7 @@ RUN set -eux; \
     jlink --compress=2  --strip-debug --no-man-pages --no-header-files --module-path ${jdir}/jmods  --add-modules java.base,java.desktop,java.instrument,java.logging,java.management,java.net.http,java.naming,java.rmi,java.security.jgss,java.sql,java.sql.rowset,java.xml,jdk.unsupported,java.scripting,jdk.dynalink,jdk.incubator.foreign,jdk.jdwp.agent,jdk.jsobject,jdk.net,jdk.nio.mapmode,jdk.sctp --bind-services --output /jre
 
 
-FROM debian:buster-slim    
+FROM docker.io/library/debian:buster-slim    
 
 LABEL MAINTAINER buzzxu <downloadxu@163.com>
 
@@ -43,7 +43,7 @@ FROM debian:buster-slim
 
 LABEL org.opencontainers.image.authors="buzzxu<downloadxu@163.com>"
 
-ADD sources.list /etc/apt/
+# ADD sources.list /etc/apt/
 
 RUN rm -rf /var/lib/apt/lists/* && \  
     apt-get clean && \
@@ -69,3 +69,5 @@ ENV LANG='C.UTF-8' LC_ALL='C.UTF-8'
 ENV JAVA_VERSION 16
 ENV JAVA_HOME=/opt/jre \
     PATH="/opt/jre/bin:$PATH"
+
+ENTRYPOINT ["java","-version"]
