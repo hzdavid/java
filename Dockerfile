@@ -20,7 +20,9 @@ RUN set -eux; \
 
 FROM debian:buster-slim
 
-LABEL MAINTAINER buzzxu <downloadxu@163.com>
+LABEL MAINTAINER=buzzxu<downloadxu@163.com>
+
+ADD sources.list /etc/apt/
 
 RUN rm -rf /var/lib/apt/lists/* && \  
     apt-get clean && \
