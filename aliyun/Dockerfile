@@ -1,4 +1,4 @@
-FROM registry.cn-hangzhou.aliyuncs.com/shxm/java:latest
+FROM registry.cn-hangzhou.aliyuncs.com/shxm/java:11
 
 LABEL MAINTAINER buzzxu <downloadxu@163.com>
 

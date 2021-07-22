@@ -1,4 +1,4 @@
-FROM azul/zulu-openjdk-debian:16 AS jlink
+FROM azul/zulu-openjdk-debian:11 AS jlink
 
 RUN set -eux; \
     apt-get update; \
