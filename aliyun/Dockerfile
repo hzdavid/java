@@ -9,7 +9,7 @@ apt-get clean && \
     apt-get update -qq && \
     apt-get upgrade -y && \
     apt-get install -y --no-install-recommends wget zip unzip && \
-    wget "http://arms-apm-hangzhou.oss-cn-hangzhou.aliyuncs.com/ArmsAgent.zip" -O ArmsAgent.zip && \
+    wget "http://arms-apm-hangzhou.oss-cn-hangzhou.aliyuncs.com/2.7.1.1-jdk11/ArmsAgent.zip" -O ArmsAgent.zip && \
     unzip ArmsAgent.zip -d /root/ && \
     apt-get autoclean && \
     apt-get clean && \
