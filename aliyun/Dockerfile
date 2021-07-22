@@ -4,9 +4,6 @@ LABEL MAINTAINER buzzxu <downloadxu@163.com>
 
 VOLUME /tmp
 
-ENV arms_licenseKey={LicenseKey}
-ENV arms_appName={AppName}
-
 RUN set -eux; \
 apt-get clean && \
     apt-get update -qq && \
