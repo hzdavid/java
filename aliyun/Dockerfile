@@ -13,6 +13,7 @@ apt-get clean && \
     unzip ArmsAgent.zip -d /root/ && \
     apt-get autoclean && \
     apt-get clean && \
+    rm -rf /ArmsAgent.zip && \
     rm -rf /var/lib/apt/lists/* && \
     rm -rf /tmp/*
 
